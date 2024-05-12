@@ -5,4 +5,9 @@ void main() {
   people[0];
   people[1];
   people[2];
+
+  people.add('Edith');
+
+  people.insert(0, 'Ray');
+  print(people);
 }
