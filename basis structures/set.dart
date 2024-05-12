@@ -10,4 +10,6 @@ void main() {
     if (mySet.contains(item)) {}
     mySet.add(item);
   }
+
+  print(mySet);
 }
