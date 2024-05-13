@@ -2,6 +2,8 @@ class Stack<E> {
   Stack() : _storage = <E>[];
   final List<E> _storage;
 
+  Stack.of(Iterable<E> elements) : _storage = List<E>.of(elements);
+
   @override
   String toString() {
     return '--- Top ---\n'
