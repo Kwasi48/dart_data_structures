@@ -10,4 +10,9 @@ void main() {
 
   final element = stack.pop();
   print('Popped: $element');
+
+  const list = ['S', 'M', 'O', 'K', 'E'];
+  final smokeStack = Stack.of(list);
+  print(smokeStack);
+  smokeStack.pop();
 }
