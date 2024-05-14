@@ -15,4 +15,5 @@ void main() {
   final smokeStack = Stack.of(list);
   print(smokeStack);
   smokeStack.pop();
+  print(smokeStack);
 }
