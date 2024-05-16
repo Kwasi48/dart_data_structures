@@ -6,12 +6,6 @@ void main() {
     return itemRev;
   }
 
-  bool balanced(String balance) {
-    List change = balance.split('');
-    Stack changStack = Stack.of(change);
-    return true;
-  }
-
   bool checkParentheses(String text) {
     var stack = Stack<int>();
     final open = '('.codeUnitAt(0);
