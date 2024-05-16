@@ -24,4 +24,9 @@ class LinkedList<E> {
     if (isEmpty) return 'Empty list';
     return head.toString();
   }
+
+  void push(E value) {
+    head = Node(value: value, next: head);
+    tail ??= head;
+  }
 }
