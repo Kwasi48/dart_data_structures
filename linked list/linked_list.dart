@@ -1,6 +1,3 @@
-import 'dart:convert';
-import 'dart:mirrors';
-
 class Node<T> {
   Node({required this.value, this.next});
 
@@ -62,5 +59,15 @@ class LinkedList<E> {
 
     node.next = Node(value: value, next: node.next);
     return node.next!;
+  }
+
+//head first removalS
+  E? pop() {
+    final value = head?.value;
+    head = head?.next;
+    if (isEmpty) {
+      tail = null;
+    }
+    return value;
   }
 }
