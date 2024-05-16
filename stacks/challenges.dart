@@ -6,6 +6,7 @@ void main() {
     return itemRev;
   }
 
+//balancing paranthesis
   bool checkParentheses(String text) {
     var stack = Stack<int>();
     final open = '('.codeUnitAt(0);
