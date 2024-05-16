@@ -25,8 +25,19 @@ class LinkedList<E> {
     return head.toString();
   }
 
+//head insertion
   void push(E value) {
     head = Node(value: value, next: head);
     tail ??= head;
+  }
+
+//tail-end insertion
+  void append(E value) {
+    if (isEmpty) {
+      push(value);
+      return;
+    }
+    tail!.next = Node(value: value);
+    tail = tail!.next;
   }
 }
