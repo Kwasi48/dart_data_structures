@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'dart:mirrors';
+
 class Node<T> {
   Node({required this.value, this.next});
 
@@ -8,5 +11,17 @@ class Node<T> {
   String toString() {
     if (next == null) return '$value';
     return '$value -> ${next.toString()}';
+  }
+}
+
+class LinkedList<E> {
+  Node<E>? head;
+  Node<E>? tail;
+
+  bool get isEmpty => head == null;
+  @override
+  String toString() {
+    if (isEmpty) return 'Empty list';
+    return head.toString();
   }
 }
