@@ -40,4 +40,27 @@ class LinkedList<E> {
     tail!.next = Node(value: value);
     tail = tail!.next;
   }
+
+  // (retrieving method)
+  Node<E>? nodeAt(int index) {
+    var currentNode = head;
+    var currentIndex = 0;
+
+    while (currentNode != null && currentIndex < index) {
+      currentNode = currentNode.next;
+      currentIndex += 1;
+    }
+    return currentNode;
+  }
+
+  //middle insertion
+  Node<E> insertAfter(Node<E> node, E value) {
+    if (tail == node) {
+      append(value);
+      return tail!;
+    }
+
+    node.next = Node(value: value, next: node.next);
+    return node.next!;
+  }
 }
