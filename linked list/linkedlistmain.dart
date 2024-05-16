@@ -16,4 +16,12 @@ void main() {
   list.push(1);
 
   print(list);
+
+  //tail test
+  final lid = LinkedList<int>();
+  lid.append(1);
+  lid.append(2);
+  lid.append(3);
+
+  print(lid);
 }
