@@ -24,4 +24,17 @@ void main() {
   lid.append(3);
 
   print(lid);
+
+  //insertAfter test
+  final lisr = LinkedList<int>();
+  lisr.push(3);
+  lisr.push(2);
+  lisr.push(1);
+
+  print('Before: $lisr');
+
+  var middleNode = lisr.nodeAt(1)!;
+  lisr.insertAfter(middleNode, 42);
+
+  print('After: $lisr');
 }
