@@ -10,20 +10,20 @@ void main() {
 
   // print(node1);
 
-  final list = LinkedList<int>();
-  list.push(3);
-  list.push(2);
-  list.push(1);
+  // final list = LinkedList<int>();
+  // list.push(3);
+  // list.push(2);
+  // list.push(1);
 
-  print(list);
+  // print(list);
 
-  //tail test
-  final lid = LinkedList<int>();
-  lid.append(1);
-  lid.append(2);
-  lid.append(3);
+  // //tail test
+  // final lid = LinkedList<int>();
+  // lid.append(1);
+  // lid.append(2);
+  // lid.append(3);
 
-  print(lid);
+  // print(lid);
 
   //insertAfter test
   // final lisr = LinkedList<int>();
@@ -50,4 +50,13 @@ void main() {
 
   print('After: $lisr');
   print('Popped value: $poppedValue');
+
+  final list = LinkedList<int>();
+  list.push(3);
+  list.push(2);
+  list.push(1);
+  print('Before: $list');
+  final removedValue = list.removeLast();
+  print('After:  $list');
+  print('Removed value: $removedValue');
 }
