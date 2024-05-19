@@ -107,13 +107,23 @@ class _LinkedListIterator<E> implements Iterator<E> {
   _LinkedListIterator(LinkedList<E> list) : _list = list;
   final LinkedList<E> _list;
 
+  Node<E>? _currentNode;
   @override
-  // TODO: implement current
-  E get current => throw UnimplementedError();
+  E get current => _currentNode!.value;
+
+  bool _firstPass = true;
 
   @override
   bool moveNext() {
-    // TODO: implement moveNext
-    throw UnimplementedError();
+    if (_list.isEmpty) return false;
+
+    if (_firstPass) {
+      _currentNode = _list.head;
+      _firstPass = false;
+    } else {
+      _currentNode = _currentNode?.next;
+    }
+
+    return _currentNode != null;
   }
 }
