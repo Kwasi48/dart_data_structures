@@ -11,7 +11,7 @@ class Node<T> {
   }
 }
 
-class LinkedList<E> {
+class LinkedList<E> extends Iterable<E> {
   Node<E>? head;
   Node<E>? tail;
 
