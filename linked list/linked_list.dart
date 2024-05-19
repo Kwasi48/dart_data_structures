@@ -85,4 +85,15 @@ class LinkedList<E> {
     tail?.next = null;
     return value;
   }
+
+  //removing from the middle
+
+  E? removeAfter(Node<E> node) {
+    final value = node.next?.value;
+    if (node.next == tail) {
+      tail = node;
+    }
+    node.next = node.next?.next;
+    return value;
+  }
 }
