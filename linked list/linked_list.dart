@@ -96,4 +96,8 @@ class LinkedList<E> extends Iterable<E> {
     node.next = node.next?.next;
     return value;
   }
+
+  @override
+  // TODO: implement iterator
+  Iterator<E> get iterator => throw UnimplementedError();
 }
