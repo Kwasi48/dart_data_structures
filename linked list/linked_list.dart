@@ -14,7 +14,7 @@ class Node<T> {
 class LinkedList<E> extends Iterable<E> {
   Node<E>? head;
   Node<E>? tail;
-
+  @override
   bool get isEmpty => head == null;
   @override
   String toString() {
