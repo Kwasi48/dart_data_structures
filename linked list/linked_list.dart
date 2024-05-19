@@ -102,3 +102,18 @@ class LinkedList<E> extends Iterable<E> {
   // TODO: implement iterator
   Iterator<E> get iterator => throw UnimplementedError();
 }
+
+class _LinkedListIterator<E> implements Iterator<E> {
+  _LinkedListIterator(LinkedList<E> list) : _list = list;
+  final LinkedList<E> _list;
+
+  @override
+  // TODO: implement current
+  E get current => throw UnimplementedError();
+
+  @override
+  bool moveNext() {
+    // TODO: implement moveNext
+    throw UnimplementedError();
+  }
+}
