@@ -100,7 +100,7 @@ class LinkedList<E> extends Iterable<E> {
 
   @override
 // TODO: implement iterator
-  Iterator<E> get iterator => throw UnimplementedError;
+  Iterator<E> get iterator => _LinkedListIterator(this);
 }
 
 class _LinkedListIterator<E> implements Iterator<E> {
