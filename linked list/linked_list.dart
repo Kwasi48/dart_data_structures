@@ -99,20 +99,18 @@ class LinkedList<E> extends Iterable<E> {
   }
 
   @override
-  // TODO: implement iterator
-  Iterator<E> get iterator => throw UnimplementedError();
+// TODO: implement iterator
+  Iterator<E> get iterator => throw UnimplementedError;
 }
 
 class _LinkedListIterator<E> implements Iterator<E> {
   _LinkedListIterator(LinkedList<E> list) : _list = list;
   final LinkedList<E> _list;
-
   Node<E>? _currentNode;
-  @override
-  E get current => _currentNode!.value;
-
   bool _firstPass = true;
 
+  @override
+  E get current => _currentNode!.value;
   @override
   bool moveNext() {
     if (_list.isEmpty) return false;
