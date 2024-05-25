@@ -29,9 +29,22 @@ void main() {
     double middle = (list.length - 1) / 2;
     print(middle);
     print(' middle is ${list.nodeAt(middle.toInt())?.value}');
-    print(list);
+  }
+
+//challenge3
+  LinkedList<int>? reversedLl(LinkedList list) {
+    final internal = LinkedList<int>();
+
+    for (var element in list) {
+      internal.push(element);
+    }
+    return internal;
   }
 
   reverseNodes(linq);
   retMiddle(linq);
+
+  print('============');
+  print(linq);
+  print(reversedLl(linq));
 }
