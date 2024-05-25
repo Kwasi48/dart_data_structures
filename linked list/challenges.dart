@@ -8,7 +8,17 @@ void main() {
   print(linq);
   print("--------------------------------------------------");
 
-  LinkedList<int> reverseNodes(LinkedList<int> list) {
-    return list;
+  void reverseNodes(LinkedList<int> list) {
+    final internal = LinkedList<int>();
+
+    for (var element in list) {
+      internal.push(element);
+    }
+
+    for (var element in internal) {
+      print(element);
+    }
   }
+
+  reverseNodes(linq);
 }
