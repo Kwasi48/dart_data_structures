@@ -65,4 +65,15 @@ void main() {
   final removedValue = list.removeAfter(firstNode!);
   print('After:  $list');
   print('Removed value: $removedValue');
+
+  final list2 = LinkedList<int>();
+  list2.push(3);
+  list2.push(2);
+  list2.push(1);
+
+  print("---------------------------------------");
+
+  for (final element in list2) {
+    print(element);
+  }
 }
