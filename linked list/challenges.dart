@@ -3,9 +3,9 @@ import 'linked_list.dart';
 void main() {
   final linq = LinkedList<int>();
   linq.push(1);
-  linq.push(2);
   linq.push(3);
-  //linq.push(4);
+  linq.push(3);
+  linq.push(4);
   print(linq);
   print("--------------------------------------------------");
 
@@ -47,4 +47,7 @@ void main() {
   print('============');
   print(linq);
   print(reversedLl(linq));
+  print(linq);
+  //challenge 4
+  print(linq.removeAt(3));
 }

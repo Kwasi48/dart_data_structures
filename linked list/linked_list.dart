@@ -98,6 +98,24 @@ class LinkedList<E> extends Iterable<E> {
     return value;
   }
 
+  LinkedList<E>? removeAt(E e) {
+    final allList = LinkedList<E>();
+    var current = e;
+    var cur = head;
+    if (tail!.value != current) {
+      allList.push(tail!.value);
+    }
+
+    while (cur != tail) {
+      if (cur?.value != current) {
+        allList.push(cur!.value);
+      }
+      cur = cur?.next;
+    }
+
+    return allList;
+  }
+
   @override
   Iterator<E> get iterator => _LinkedListIterator(this);
 }
