@@ -48,4 +48,7 @@ class QueueLinkedList<E> implements Queue<E> {
   @override
   // TODO: implement peek
   E? get peek => _list.head?.value;
+
+  @override
+  String toString() => _list.toString();
 }
