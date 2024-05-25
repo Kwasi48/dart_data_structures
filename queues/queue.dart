@@ -33,21 +33,19 @@ class QueueLinkedList<E> implements Queue<E> {
   final _list = DoublyLinkedList<E>();
   @override
   E? dequeue() {
-    // TODO: implement dequeue
-    throw UnimplementedError();
+    _list.pop();
   }
 
   @override
   bool enqueue(E element) {
-    // TODO: implement enqueue
-    throw UnimplementedError();
+    _list.append(element);
+    return true;
   }
 
   @override
-  // TODO: implement isEmpty
-  bool get isEmpty => throw UnimplementedError();
+  bool get isEmpty => _list.isEmpty;
 
   @override
   // TODO: implement peek
-  E? get peek => throw UnimplementedError();
+  E? get peek => _list.head?.value;
 }
