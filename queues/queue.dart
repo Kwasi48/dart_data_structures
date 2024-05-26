@@ -32,9 +32,7 @@ class QueueList<E> implements Queue<E> {
 class QueueLinkedList<E> implements Queue<E> {
   final _list = DoublyLinkedList<E>();
   @override
-  E? dequeue() {
-    _list.pop();
-  }
+  E? dequeue() => _list.pop();
 
   @override
   bool enqueue(E element) {
