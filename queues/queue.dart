@@ -80,3 +80,28 @@ class QueueRingBuffer<E> implements Queue<E> {
   @override
   String toString() => _ringBuffer.toString();
 }
+
+class QueueStack<E> implements Queue<E>{
+  final _leftStack = <E>[];
+  final _rightStack = <E>[];
+  
+  @override
+  E? dequeue() {
+    // TODO: implement dequeue
+    throw UnimplementedError();
+  }
+  
+  @override
+  bool enqueue(E element) {
+    // TODO: implement enqueue
+    throw UnimplementedError();
+  }
+  
+  @override
+  bool get isEmpty =>  _leftStack.isEmpty && _rightStack.isEmpty;
+  
+  @override
+  // TODO: implement peek
+  E? get peek => throw UnimplementedError();
+
+}
