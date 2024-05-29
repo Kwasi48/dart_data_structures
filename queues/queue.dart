@@ -65,8 +65,12 @@ class QueueRingBuffer<E> implements Queue<E> {
   
   @override
   bool enqueue(E element) {
-    // TODO: implement enqueue
-    throw UnimplementedError();
+    if (_ringBuffer.isFull){
+      return false;
+    }
+    _ringBuffer.write(element);
+    return true;
+  
   }
   
   @override
