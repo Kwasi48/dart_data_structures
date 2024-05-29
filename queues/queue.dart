@@ -70,8 +70,7 @@ class QueueRingBuffer<E> implements Queue<E> {
   }
   
   @override
-  // TODO: implement isEmpty
-  bool get isEmpty => throw UnimplementedError();
+  bool get isEmpty => _ringBuffer.isEmpty;
   
   @override
   // TODO: implement peek
