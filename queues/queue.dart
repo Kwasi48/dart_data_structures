@@ -58,10 +58,7 @@ class QueueRingBuffer<E> implements Queue<E> {
   final RingBuffer<E> _ringBuffer;
   
   @override
-  E? dequeue() {
-    // TODO: implement dequeue
-    throw UnimplementedError();
-  }
+  E? dequeue() => _ringBuffer.read();
   
   @override
   bool enqueue(E element) {
@@ -78,5 +75,8 @@ class QueueRingBuffer<E> implements Queue<E> {
   
   @override
   // TODO: implement peek
-  E? get peek => throw UnimplementedError();
+  E? get peek =>  _ringBuffer.peek;
+
+  @override
+  String toString() => _ringBuffer.toString();
 }
