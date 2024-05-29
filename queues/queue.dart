@@ -1,4 +1,5 @@
 import "doubly_linked_list.dart";
+import "ring_buffer.dart";
 
 abstract class Queue<E> {
   bool enqueue(E element);
@@ -49,4 +50,30 @@ class QueueLinkedList<E> implements Queue<E> {
 
   @override
   String toString() => _list.toString();
+}
+
+class QueueRingBuffer<E> implements Queue<E> {
+  QueueRingBuffer(int length) : _ringBuffer = RingBuffer<E>(length);
+
+  final RingBuffer<E> _ringBuffer;
+  
+  @override
+  E? dequeue() {
+    // TODO: implement dequeue
+    throw UnimplementedError();
+  }
+  
+  @override
+  bool enqueue(E element) {
+    // TODO: implement enqueue
+    throw UnimplementedError();
+  }
+  
+  @override
+  // TODO: implement isEmpty
+  bool get isEmpty => throw UnimplementedError();
+  
+  @override
+  // TODO: implement peek
+  E? get peek => throw UnimplementedError();
 }
