@@ -74,7 +74,7 @@ class QueueRingBuffer<E> implements Queue<E> {
   bool get isEmpty => _ringBuffer.isEmpty;
   
   @override
-  // TODO: implement peek
+  
   E? get peek =>  _ringBuffer.peek;
 
   @override
@@ -92,9 +92,9 @@ class QueueStack<E> implements Queue<E>{
       _rightStack.clear();
     }
 
-    if (_leftStack.isEmpty){
-      return _leftStack.removeLast();
-    }
+    if (_leftStack.isEmpty) return null;
+    return _leftStack.removeLast();
+    
   }
   
   @override
