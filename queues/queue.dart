@@ -87,21 +87,26 @@ class QueueStack<E> implements Queue<E>{
   
   @override
   E? dequeue() {
-    // TODO: implement dequeue
-    throw UnimplementedError();
+    if (_leftStack.isEmpty){
+      _leftStack.addAll(_rightStack.reversed);
+      _rightStack.clear();
+    }
+
+    if (_leftStack.isEmpty){
+      return _leftStack.removeLast();
+    }
   }
   
   @override
   bool enqueue(E element) {
-    // TODO: implement enqueue
-    throw UnimplementedError();
+     _rightStack.add(element);
+     return true;
   }
   
   @override
   bool get isEmpty =>  _leftStack.isEmpty && _rightStack.isEmpty;
   
   @override
-  // TODO: implement peek
-  E? get peek => throw UnimplementedError();
+  E? get peek =>  _leftStack.isNotEmpty ? _leftStack.last: _rightStack.first;
 
 }
