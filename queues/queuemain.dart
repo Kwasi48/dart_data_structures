@@ -25,7 +25,19 @@ void main() {
   // queue.peek;
   // print(queue);
 
-    final queue = QueueRingBuffer<String>(10);
+//     final queue = QueueRingBuffer<String>(10);
+//   queue.enqueue('Ray');
+//   queue.enqueue('Brian');
+//   queue.enqueue('Eric');
+//   print(queue);
+
+//   queue.dequeue();
+//   print(queue);
+
+//   queue.peek;
+//   print(queue);
+// }
+final queue = QueueStack<String>();
   queue.enqueue('Ray');
   queue.enqueue('Brian');
   queue.enqueue('Eric');
@@ -36,4 +48,5 @@ void main() {
 
   queue.peek;
   print(queue);
+
 }

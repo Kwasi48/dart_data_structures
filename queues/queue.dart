@@ -109,4 +109,13 @@ class QueueStack<E> implements Queue<E>{
   @override
   E? get peek =>  _leftStack.isNotEmpty ? _leftStack.last: _rightStack.first;
 
+  @override
+  String toString(){
+    final  combined = [
+      ..._leftStack.reversed,
+      ..._rightStack,
+    ].join(',');
+    return '[$combined]';
+  }
+
 }
