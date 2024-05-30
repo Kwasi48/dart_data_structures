@@ -1,3 +1,5 @@
+import 'queue.dart';
+
 class RingBuffer<E> {
   RingBuffer(int length) : _list = List.filled(length, null, growable: false);
 
@@ -45,5 +47,12 @@ class RingBuffer<E> {
     }
     text.write(']');
     return text.toString();
+  }
+}
+
+//challenge 3
+extension BoardGamesManager<E> on QueueRingBuffer {
+  E? nextPlayer(){
+    
   }
 }
