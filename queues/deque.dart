@@ -37,7 +37,6 @@ class StackDequeue<E> implements Deque<E> {
   }
 
   @override
-  // TODO: implement isEmpty
   bool get isEmpty => _lizz.isEmpty;
 
   @override
