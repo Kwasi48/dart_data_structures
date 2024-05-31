@@ -41,8 +41,12 @@ class StackDequeue<E> implements Deque<E> {
 
   @override
   E? peek(Direction from) {
-    // TODO: implement peek
-    throw UnimplementedError();
+     if (from == Direction.front){
+      return _lizz.first;
+     }
+     if (from ==  Direction.back){
+      return _lizz.last;
+     }
   }
 
 }
