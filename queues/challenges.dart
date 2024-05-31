@@ -23,13 +23,13 @@ void main(){
 final queue = StackDequeue<String>();
   queue.enqueue('Ray',Direction.front);
   queue.enqueue('Brian',Direction.back);
-  queue.enqueue('Eric',Direction.back);
+  queue.enqueue('Eric',Direction.front);
   print(queue);
 
-  // queue.dequeue(Direction.back);
-  // print(queue);
+  queue.dequeue(Direction.back);
+  print(queue);
 
-  // queue.peek;
-  // print(queue);
+  queue.peek;
+  print(queue);
 
 }
