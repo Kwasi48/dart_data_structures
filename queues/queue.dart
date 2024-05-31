@@ -158,6 +158,12 @@ class StackDequeue<E> implements Deque<E> {
      if (from ==  Direction.back){
       return _lizz.last;
      }
+     return null;
+  }
+
+  @override
+  String toString(){
+    return _lizz.toString();
   }
 
 }

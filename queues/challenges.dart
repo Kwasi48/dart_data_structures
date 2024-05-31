@@ -1,3 +1,4 @@
+import 'deque.dart';
 import 'queue.dart';
 
 void main(){
@@ -15,5 +16,20 @@ void main(){
 //solved in my notebook 😂😂😊🤣
 
 //challenge three
+
+
+
+//challenge four 
+final queue = StackDequeue<String>();
+  queue.enqueue('Ray',Direction.front);
+  queue.enqueue('Brian',Direction.back);
+  queue.enqueue('Eric',Direction.back);
+  print(queue);
+
+  // queue.dequeue(Direction.back);
+  // print(queue);
+
+  // queue.peek;
+  // print(queue);
 
 }
