@@ -24,13 +24,21 @@ class StackDequeue<E> implements Deque<E> {
 
   @override
   bool enqueue(E element, Direction to) {
-    // TODO: implement enqueue
-    throw UnimplementedError();
+     if (to == Direction.back) {
+       _lizz.add(element);
+       return true;
+     } 
+      if (to == Direction.front) {
+        _lizz.insert(0, element);
+        return true;
+      }
+     return false; 
+     
   }
 
   @override
   // TODO: implement isEmpty
-  bool get isEmpty => throw UnimplementedError();
+  bool get isEmpty => _lizz.isEmpty;
 
   @override
   E? peek(Direction from) {
