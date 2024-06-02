@@ -3,13 +3,16 @@
 import 'tree.dart';
 
 void main(){
-  final beverages = TreeNode('Beverages');
-  final hot = TreeNode('Hot');
-  final cold = TreeNode('Cold');
-  beverages.add(hot);
-  beverages.add(cold);
+//   final beverages = TreeNode('Beverages');
+//   final hot = TreeNode('Hot');
+//   final cold = TreeNode('Cold');
+//   beverages.add(hot);
+//   beverages.add(cold);
+// final tree = makeBeverageTree();
+// tree.forEachDepthFirst((node) => print(node.value));
+
 final tree = makeBeverageTree();
-tree.forEachDepthFirst((node) => print(node.value));
+tree.forEachLevelOrder((node)=> print(node.value));
   
 }
 
