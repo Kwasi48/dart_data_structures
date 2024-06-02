@@ -12,7 +12,13 @@ void main(){
 // tree.forEachDepthFirst((node) => print(node.value));
 
 final tree = makeBeverageTree();
-tree.forEachLevelOrder((node)=> print(node.value));
+//tree.forEachLevelOrder((node)=> print(node.value));
+
+final searchResult1 = tree.Search('ginger Ale');
+print(searchResult1?.value); 
+
+final searchResult2 = tree.Search('water');
+print(searchResult2?.value);
   
 }
 
