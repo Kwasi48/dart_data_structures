@@ -1,6 +1,4 @@
- 
-
-import 'tree.dart';
+ import 'tree.dart';
 
 void main(){
 //   final beverages = TreeNode('Beverages');
@@ -14,7 +12,7 @@ void main(){
 final tree = makeBeverageTree();
 //tree.forEachLevelOrder((node)=> print(node.value));
 
-final searchResult1 = tree.Search('ginger Ale');
+final searchResult1 = tree.Search('ginger ale');
 print(searchResult1?.value); 
 
 final searchResult2 = tree.Search('water');
