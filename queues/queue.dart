@@ -131,6 +131,7 @@ class StackDequeue<E> implements Deque<E> {
      }  else if (from == Direction.back){
         return _lizz.removeLast();
      }
+     return null;
   }
 
   @override

@@ -1,4 +1,5 @@
 import'../queues/queue.dart';
+//import 'dart:io';
 
 class TreeNode<T> {
   TreeNode(this.value);
@@ -27,6 +28,18 @@ class TreeNode<T> {
       node = queue.dequeue();
     }
   }
+
+  //   void forEachLevelOrderp(void Function (TreeNode<T> node) performAction){
+  //   final queue = QueueStack<TreeNode<T>>();
+  //   performAction(this);
+  //   children.forEach(queue.enqueue);
+  //   var node = queue.dequeue();
+  //   while (node != null){
+  //     performAction(node);
+  //     node.children.forEach(queue.enqueue);
+  //     node = queue.dequeue();
+  //   }
+  // }
 
   TreeNode? Search (T value){
     TreeNode? result;
