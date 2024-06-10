@@ -6,6 +6,8 @@ void main(){
   numbers.forEachLevelOrder((node) {
      
   });
+
+  printEachLevel(levelNumbers());
 }
 
  void printEachLevel<T>(TreeNode<T> tree) { 
