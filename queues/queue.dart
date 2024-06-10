@@ -97,6 +97,8 @@ class QueueStack<E> implements Queue<E>{
     return _leftStack.removeLast();
     
   }
+
+  int get length => _leftStack.length + _rightStack.length;
   
   @override
   bool enqueue(E element) {
