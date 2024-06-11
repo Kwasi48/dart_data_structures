@@ -46,7 +46,6 @@ class QueueLinkedList<E> implements Queue<E> {
   bool get isEmpty => _list.isEmpty;
 
   @override
-  // TODO: implement peek
   E? get peek => _list.head?.value;
 
   @override
