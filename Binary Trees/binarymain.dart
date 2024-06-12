@@ -1,6 +1,7 @@
 import 'binary_node.dart';
 void main(){
-  
+  final tree = createBinaryTree();
+  print(tree);
 }
 
 BinaryNode<int> createBinaryTree(){
