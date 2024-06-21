@@ -1,7 +1,8 @@
 import 'binary_node.dart';
 void main(){
   final tree = createBinaryTree();
-  print(tree);
+  //print(tree);
+  tree.traverseInOrder(print);
 }
 
 BinaryNode<int> createBinaryTree(){
