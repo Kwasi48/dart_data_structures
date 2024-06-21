@@ -3,7 +3,8 @@ void main(){
   final tree = createBinaryTree();
   print(tree);
   //tree.traverseInOrder(print);
-  tree.traversePreOrder(print);
+  //tree.traversePreOrder(print);
+  tree.traversePostOrder(print);
 }
 
 BinaryNode<int> createBinaryTree(){
