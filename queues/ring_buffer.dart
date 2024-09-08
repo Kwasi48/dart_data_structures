@@ -53,6 +53,8 @@ class RingBuffer<E> {
 //challenge 3
 extension BoardGamesManager<E> on QueueRingBuffer {
   E? nextPlayer(){
+    return null;
+  
     
   }
 }
